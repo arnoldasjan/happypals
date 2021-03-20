@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return '{"starting point":58}'
+    return 'This is a homepage for Healthy Pals REST API'
 
 
 @app.route('/get/traverse')
