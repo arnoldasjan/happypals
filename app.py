@@ -1,4 +1,6 @@
 from flask import Flask
+import json
+import data_manipulation
 
 app = Flask(__name__)
 
@@ -10,12 +12,29 @@ def hello_world():
 
 @app.route('/get/traverse')
 def traverse_data():
-    return '''
-    {
-        "video_start": 58,
-        "highest_point": 2.56
+    x = {
+        "video_start": data_manipulation.traverse_timestamp,
+        "highest_point": data_manipulation.traverse_height_value
     }
-    '''
+    return json.dumps(x)
+
+
+@app.route('/get/vertical')
+def vertical_data():
+    x = {
+        "video_start": data_manipulation.vertical_timestamp,
+        "highest_point": data_manipulation.vertical_highest_value
+    }
+    return json.dumps(x)
+
+
+@app.route('/get/overhang')
+def overhang_data():
+    x = {
+        "video_start": data_manipulation.overhang_timestamp,
+        "highest_point": data_manipulation.overhang_height_value
+    }
+    return json.dumps(x)
 
 
 if __name__ == '__main__':
