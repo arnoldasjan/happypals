@@ -31,9 +31,9 @@ traverse_duration = traverse_data['data']['climbs'][0]['duration']
 vertical_duration = vertical_data['data']['climbs'][0]['duration']
 overhang_duration = overhang_data['data']['climbs'][0]['duration']
 
-traverse_total = len(traverse)
-vertical_total = len(vertical)
-overhang_total = len(overhang)
+traverse_total = len(traverse_height_profile)
+vertical_total = len(vertical_height_profile)
+overhang_total = len(overhang_height_profile)
 
 traverse_timestamp = traverse_height_index / traverse_total * traverse_duration
 vertical_timestamp = vertical_highest_index / vertical_total * vertical_duration
