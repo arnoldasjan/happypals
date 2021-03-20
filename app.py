@@ -15,7 +15,7 @@ def traverse_data():
     x = {
         "video_start": data_manipulation.traverse_timestamp,
         "highest_point": data_manipulation.traverse_height_value,
-        "summary": data_manipulation.traverse['data']['summary_stats']
+        "summary": data_manipulation.traverse_data['data']['summary_stats']
     }
     return json.dumps(x)
 
@@ -25,7 +25,7 @@ def vertical_data():
     x = {
         "video_start": data_manipulation.vertical_timestamp,
         "highest_point": data_manipulation.vertical_highest_value,
-        "summary": data_manipulation.vertical['data']['summary_stats']
+        "summary": data_manipulation.vertical_data['data']['summary_stats']
     }
     return json.dumps(x)
 
@@ -35,7 +35,7 @@ def overhang_data():
     x = {
         "video_start": data_manipulation.overhang_timestamp,
         "highest_point": data_manipulation.overhang_height_value,
-        "summary": data_manipulation.overhang['data']['summary_stats']
+        "summary": data_manipulation.overhang_data['data']['summary_stats']
     }
     return json.dumps(x)
 
